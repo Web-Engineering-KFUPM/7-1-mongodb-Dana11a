@@ -199,7 +199,7 @@ const studentSchema = new mongoose.Schema({
  
  const Student = mongoose.model("Student", studentSchema);
 // create document
-async function createStudents() {
+/**async function createStudents() {
    await Student.insertMany([
      { name: "Ali", age: 21, major: "CS" },
      { name: "Sara", age: 23, major: "SE" }
@@ -207,15 +207,20 @@ async function createStudents() {
    console.log("✅ Inserted");
  }
  
- createStudents();
+ createStudents();**/
 
 // read document
+
 async function readStudents() {
    const students = await Student.find();
    console.log("All Students:", students);
  }
 
 // update document
-
+async function updateStudent() {
+   await Student.updateOne({ name: "Ali" }, { age: 22 });
+   console.log("Updated Ali");
+ }
 
 // delete document
+
