@@ -187,11 +187,7 @@
 // import mongoose
 import mongoose from "mongoose";
 // establish connection
-const uri = "mongodb+srv://s202280240_db_user:<1w2w3w4w5w6>@cluster0.io83vud.mongodb.net/TestDB"
-mongoose
-  .connect(uri)
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.log("Connection Error:", err));
+mongoose.connect("mongodb+srv://s202280240_db_user:<1w2w3w4w5w6>@cluster0.io83vud.mongodb.net/TestDB")
 // define schema
 
 
